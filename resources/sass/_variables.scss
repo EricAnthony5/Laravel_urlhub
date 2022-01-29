@@ -1,0 +1,51 @@
+@use "sass:color";
+@use "sass:map";
+
+//----------------------------------------------------------------------------
+// Custom variables
+//----------------------------------------------------------------------------
+
+$uh--black:   #232d3b;
+$uh--blue:    #3D5B99;
+$uh--green:   #1c9963;
+$uh--indigo:  #3958c8;
+$uh--purple:  #546de5;
+$uh--red:     #e04a4a;
+$uh--orange:  #ff813f;
+
+$uh--bg-gray: #f3f4f6;
+
+$uh--primary:   $uh--blue;
+$uh--secondary: $uh--green;
+$uh--tertiary:  $uh--orange;
+
+
+
+//----------------------------------------------------------------------------
+// twbs/bootstrap
+//----------------------------------------------------------------------------
+
+// $black:  $uh--black;
+// $blue:   $uh--blue;
+// $green:  $uh--green;
+// $indigo: $uh--indigo;
+// $purple: $uh--purple;
+// $red:    $uh--red;
+// $orange: $uh--orange;
+
+// $primary:   $uh--primary;
+// $secondary: $uh--secondary;
+// $success:   $uh--green;
+
+// $theme-colors: ();
+// $theme-colors: map.merge(
+//   (
+//     "tertiary":  $uh--tertiary
+//   ),
+//   $theme-colors
+// );
+
+$card-cap-bg:        none;
+$card-border-radius: 0.25rem;
+
+$table-accent-bg: rgba($uh--bg-gray, .05);

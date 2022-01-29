@@ -1,870 +1,117 @@
-Contribution: 2020-04-03 00:00
+<h1>UrlHub</h1>
 
-Contribution: 2020-04-03 00:01
+[![MadeWithLaravel.com shield](https://madewithlaravel.com/storage/repo-shields/1049-shield.svg)](https://madewithlaravel.com/p/plur/shield-link)
+[![LaravelVersion](https://img.shields.io/badge/Laravel-8-f56857.svg?style=flat-square)](https://laravel.com/docs/8.x)
+![PHPVersion](https://img.shields.io/badge/PHP-8-777BB4.svg?style=flat-square)
+[![GitHub license](https://img.shields.io/github/license/realodix/newt.svg?style=flat-square)](https://github.com/realodix/newt/blob/master/LICENSE) <br>
+![Build Status](https://github.com/realodix/urlhub/actions/workflows/tests.yml/badge.svg)
+[![StyleCI shield](https://github.styleci.io/repos/146186200/shield)](https://github.styleci.io/repos/146186200)
+[![Coverage Status](https://coveralls.io/repos/github/realodix/urlhub/badge.svg?branch=master)](https://coveralls.io/github/realodix/urlhub)
 
-Contribution: 2020-04-03 00:02
+> **Warning: UrlHub is still in development**, constantly being optimized and isn't still stable enough to be used in production environments.
 
-Contribution: 2020-04-03 00:03
+> **Whatever your idea, feel free to send a pull request** 😃
 
-Contribution: 2020-04-03 00:04
+UrlHub was created, and is maintained by [Budi Hermawan](https://github.com/realodix), and is an open-source, easy-to-use but powerful URL shortener. It allows you to host your own URL shortener, and gives you many useful features.
 
-Contribution: 2020-04-03 00:05
+### Features
+- **Reliable link shortner:** Does the job really well and it is very consistent. UrlHub is definitely one of the most reliable self-hosted URL shortener out there. Would recommend easily.
+- **Custom URLs (ex: example.com/laravel):** Allows users to create more descriptive short URLs rather than a randomly generated mix of letters and numbers.
+- **QR code generator for each short link:** The fastest way to access to this data is most likely opening the link from a phone. Though short URLs are handy for typing, a more convenient approach to transfer a web link to a mobile phone is through QR codes scanning.
+- **Edit or delete your links:** You can change both the address and the destination URL. You can even delete your URL, a feature that is not available with most shorteners.
+- **View where link goes:** It's nice to see where the link goes before clicking on it so you can avoid sketchy links.
+- **Link preview:** If possible, UrlHub will automatically embedding the content when you shorten URLs. It's nice to preview the page.
+- **IP anonymization (or IP masking) [optional]:** Anonymizes visitor addresses as soon as technically feasible at the earliest possible stage of the collection network. The full IP address is never written to disk in this case. This feature is designed to help site owners comply with their own privacy policies, recommendations from local data protection authorities and legal regulations like the GDPR, which may prevent the storage of full IP address information.
+- **Power of customisation:** Do you want your site to be just for your use, so no one can register? No problem. It's in the configuration. Users must be registered to create Short URL? That's okay. It's in the configuration. From configuration file, you can edit pretty everything of your website. The choice is yours.
+- **Configuration guard:** No need to worry if you fill in the configuration values with the wrong data type or values that is not allowed, UrlHub will automatically correct it for you.
+- **Sortable list of shortened URLs.**
+- **[Datatables](https://datatables.net/) with server-side processing.**
+- **Written in [PHP](https://www.php.net/) and [Laravel 8](https://laravel.com/docs/8.x).**
+- **Modern and simple interface.**
+- **Made with :heart: &amp; :coffee:.**
 
-Contribution: 2020-04-03 00:06
 
-Contribution: 2020-04-03 00:07
+### Screenshots
+![screenshot](https://i.imgur.com/GFvIeBg.png) | ![screenshot](https://i.imgur.com/nJGVGHT.png) | ![screenshot](https://i.imgur.com/CpMAeaq.png) | ![screenshot](https://i.imgur.com/imRINvR.jpg) |
+|-|-|-|-|
 
-Contribution: 2020-04-07 00:00
 
-Contribution: 2020-04-07 00:01
+## Requirements
+* All requirements by [Laravel](https://laravel.com/docs/installation#server-requirements) & dependencies - PHP >= 8.0, [Composer](https://getcomposer.org/) and such.
+* MySQL or MariaDB or PostgreSQL.
 
-Contribution: 2020-04-07 00:02
 
-Contribution: 2020-04-07 00:03
+## Quick Start
+### Installation Instructions
+1. Run `composer install`.
 
-Contribution: 2020-04-08 00:00
+2. Rename `.env.example` file to `.env` or run `cp .env.example .env`.
 
-Contribution: 2020-04-08 00:01
+   Update `.env` to your specific needs. Don't forget to set `DB_USERNAME` and `DB_PASSWORD` with the settings used behind.
 
-Contribution: 2020-04-08 00:02
+3. Run `php artisan key:generate`.
 
-Contribution: 2020-04-08 00:03
+4. Run `php artisan migrate --seed`.
 
-Contribution: 2020-04-08 00:04
+5. Run `php artisan serve`.
 
-Contribution: 2020-04-08 00:05
+   After installed, you can access `http://localhost:8000` in your browser.
 
-Contribution: 2020-04-08 00:06
+6. Login
 
-Contribution: 2020-04-08 00:07
+   | Email             | Username | Password | Access       |
+   |-------------------|----------|----------|--------------|
+   | admin@urlhub.test | admin    | admin    | Admin Access |
+   | user@urlhub.test  | user     | user     | User Access  |
 
-Contribution: 2020-04-08 00:08
 
-Contribution: 2020-04-08 00:09
+### Compiling assets with Laravel Mix
 
-Contribution: 2020-04-08 00:10
+#### Using Yarn
+1. `yarn`
+2. `yarn dev` or `yarn prod`
 
-Contribution: 2020-04-09 00:00
+    *You can watch assets with `yarn watch`*
 
-Contribution: 2020-04-10 00:00
+#### Using NPM
+1. `npm install`
+2. `npm run dev` or `npm run prod`
 
-Contribution: 2020-04-10 00:01
+    *You can watch assets with `npm run watch`*
 
-Contribution: 2020-04-10 00:02
+   Please note that this project uses Yarn as the package manager, so you can't find the package-lock.json file that is needed by NPM.
 
-Contribution: 2020-04-10 00:03
+## Contributing
+The people who contribute to UrlHub do so for the love of open source, our users and ecosystem, and most importantly, pushing the web forward together. Developers like you can help by contributing to rich and vibrant documentation, issuing pull requests to help us cover niche use cases, and to help sustain what you love about UrlHub. 
 
-Contribution: 2020-04-10 00:04
+Anybody can help by doing any of the following:
+- Ask your employer to use UrlHub in projects.
+- Contribute to the core repository.
 
-Contribution: 2020-04-10 00:05
+### Running Tests
 
-Contribution: 2020-04-10 00:06
+- **Command Line**
 
-Contribution: 2020-04-10 00:07
+  From the projects root folder run 
+  - `php artisan test`
+  - or `./vendor/bin/phpunit`
 
-Contribution: 2020-04-10 00:08
+- **VSCode Tasks**
+  - `Run tests`
+  - or `Run tests (PHPUnit)`
 
-Contribution: 2020-04-10 00:09
+![screenshot](https://i.imgur.com/jQU2h17.jpg)
 
-Contribution: 2020-04-10 00:10
 
-Contribution: 2020-04-10 00:11
+## Bug Report
+If you've found a problem in UrlHub which is not a security risk, do a search on [GitHub under Issues](https://github.com/realodix/urlhub/issues) in case it has already been reported. If you are unable to find any open GitHub issues addressing the problem you found, your next step will be to [open a new one](https://github.com/realodix/urlhub/issues/new/choose).
 
-Contribution: 2020-04-10 00:12
+Your issue should contain a title and a clear description of the issue. You should also include as much relevant information as possible and a code sample that demonstrates the issue.
 
-Contribution: 2020-04-14 00:00
+The goal of a bug report is to make it easy for yourself - and others - to replicate the bug and develop a fix. Remember, bug reports are created in the hope that others with the same problem will be able to collaborate with you on solving it.
 
-Contribution: 2020-04-14 00:01
+Do not expect that the bug report will automatically see any activity or that others will jump to fix it. Creating a bug report serves to help yourself and others start on the path of fixing the problem.
 
-Contribution: 2020-04-14 00:02
 
-Contribution: 2020-04-14 00:03
-
-Contribution: 2020-04-14 00:04
-
-Contribution: 2020-04-14 00:05
-
-Contribution: 2020-04-14 00:06
-
-Contribution: 2020-04-14 00:07
-
-Contribution: 2020-04-14 00:08
-
-Contribution: 2020-04-14 00:09
-
-Contribution: 2020-04-14 00:10
-
-Contribution: 2020-04-14 00:11
-
-Contribution: 2020-04-14 00:12
-
-Contribution: 2020-04-15 00:00
-
-Contribution: 2020-04-15 00:01
-
-Contribution: 2020-04-15 00:02
-
-Contribution: 2020-04-15 00:03
-
-Contribution: 2020-04-15 00:04
-
-Contribution: 2020-04-15 00:05
-
-Contribution: 2020-04-15 00:06
-
-Contribution: 2020-04-15 00:07
-
-Contribution: 2020-04-15 00:08
-
-Contribution: 2020-04-15 00:09
-
-Contribution: 2020-04-17 00:00
-
-Contribution: 2020-04-17 00:01
-
-Contribution: 2020-04-17 00:02
-
-Contribution: 2020-04-17 00:03
-
-Contribution: 2020-04-17 00:04
-
-Contribution: 2020-04-17 00:05
-
-Contribution: 2020-04-17 00:06
-
-Contribution: 2020-04-22 00:00
-
-Contribution: 2020-04-22 00:01
-
-Contribution: 2020-04-22 00:02
-
-Contribution: 2020-04-22 00:03
-
-Contribution: 2020-04-22 00:04
-
-Contribution: 2020-04-22 00:05
-
-Contribution: 2020-04-22 00:06
-
-Contribution: 2020-04-22 00:07
-
-Contribution: 2020-04-22 00:08
-
-Contribution: 2020-04-22 00:09
-
-Contribution: 2020-04-22 00:10
-
-Contribution: 2020-04-22 00:11
-
-Contribution: 2020-04-22 00:12
-
-Contribution: 2020-04-22 00:13
-
-Contribution: 2020-04-23 00:00
-
-Contribution: 2020-04-23 00:01
-
-Contribution: 2020-04-23 00:02
-
-Contribution: 2020-04-23 00:03
-
-Contribution: 2020-04-23 00:04
-
-Contribution: 2020-04-23 00:05
-
-Contribution: 2020-04-23 00:06
-
-Contribution: 2020-04-23 00:07
-
-Contribution: 2020-04-23 00:08
-
-Contribution: 2020-04-23 00:09
-
-Contribution: 2020-04-24 00:00
-
-Contribution: 2020-04-24 00:01
-
-Contribution: 2020-04-24 00:02
-
-Contribution: 2020-04-24 00:03
-
-Contribution: 2020-04-24 00:04
-
-Contribution: 2020-04-24 00:05
-
-Contribution: 2020-04-24 00:06
-
-Contribution: 2020-04-24 00:07
-
-Contribution: 2020-04-24 00:08
-
-Contribution: 2020-04-24 00:09
-
-Contribution: 2020-04-27 00:00
-
-Contribution: 2020-04-27 00:01
-
-Contribution: 2020-04-27 00:02
-
-Contribution: 2020-04-27 00:03
-
-Contribution: 2020-04-27 00:04
-
-Contribution: 2020-04-28 00:00
-
-Contribution: 2020-04-28 00:01
-
-Contribution: 2020-04-28 00:02
-
-Contribution: 2020-04-28 00:03
-
-Contribution: 2020-04-28 00:04
-
-Contribution: 2020-04-28 00:05
-
-Contribution: 2020-04-30 00:00
-
-Contribution: 2020-04-30 00:01
-
-Contribution: 2020-04-30 00:02
-
-Contribution: 2020-04-30 00:03
-
-Contribution: 2020-04-30 00:04
-
-Contribution: 2020-04-30 00:05
-
-Contribution: 2020-04-30 00:06
-
-Contribution: 2020-04-30 00:07
-
-Contribution: 2020-04-30 00:08
-
-Contribution: 2020-04-30 00:09
-
-Contribution: 2020-04-30 00:10
-
-Contribution: 2020-04-30 00:11
-
-Contribution: 2020-04-30 00:12
-
-Contribution: 2020-04-30 00:13
-
-Contribution: 2020-05-04 00:00
-
-Contribution: 2020-05-04 00:01
-
-Contribution: 2020-05-04 00:02
-
-Contribution: 2020-05-04 00:03
-
-Contribution: 2020-05-04 00:04
-
-Contribution: 2020-05-04 00:05
-
-Contribution: 2020-05-04 00:06
-
-Contribution: 2020-05-04 00:07
-
-Contribution: 2020-05-04 00:08
-
-Contribution: 2020-05-04 00:09
-
-Contribution: 2020-05-05 00:00
-
-Contribution: 2020-05-05 00:01
-
-Contribution: 2020-05-05 00:02
-
-Contribution: 2020-05-05 00:03
-
-Contribution: 2020-05-05 00:04
-
-Contribution: 2020-05-05 00:05
-
-Contribution: 2020-05-05 00:06
-
-Contribution: 2020-05-05 00:07
-
-Contribution: 2020-05-05 00:08
-
-Contribution: 2020-05-05 00:09
-
-Contribution: 2020-05-06 00:00
-
-Contribution: 2020-05-06 00:01
-
-Contribution: 2020-05-06 00:02
-
-Contribution: 2020-05-06 00:03
-
-Contribution: 2020-05-06 00:04
-
-Contribution: 2020-05-06 00:05
-
-Contribution: 2020-05-06 00:06
-
-Contribution: 2020-05-06 00:07
-
-Contribution: 2020-05-11 00:00
-
-Contribution: 2020-05-11 00:01
-
-Contribution: 2020-05-11 00:02
-
-Contribution: 2020-05-11 00:03
-
-Contribution: 2020-05-11 00:04
-
-Contribution: 2020-05-11 00:05
-
-Contribution: 2020-05-11 00:06
-
-Contribution: 2020-05-11 00:07
-
-Contribution: 2020-05-11 00:08
-
-Contribution: 2020-05-11 00:09
-
-Contribution: 2020-05-11 00:10
-
-Contribution: 2020-05-11 00:11
-
-Contribution: 2020-05-11 00:12
-
-Contribution: 2020-05-12 00:00
-
-Contribution: 2020-05-12 00:01
-
-Contribution: 2020-05-12 00:02
-
-Contribution: 2020-05-12 00:03
-
-Contribution: 2020-05-12 00:04
-
-Contribution: 2020-05-12 00:05
-
-Contribution: 2020-05-12 00:06
-
-Contribution: 2020-05-12 00:07
-
-Contribution: 2020-05-13 00:00
-
-Contribution: 2020-05-13 00:01
-
-Contribution: 2020-05-13 00:02
-
-Contribution: 2020-05-13 00:03
-
-Contribution: 2020-05-13 00:04
-
-Contribution: 2020-05-13 00:05
-
-Contribution: 2020-05-13 00:06
-
-Contribution: 2020-05-13 00:07
-
-Contribution: 2020-05-13 00:08
-
-Contribution: 2020-05-13 00:09
-
-Contribution: 2020-05-13 00:10
-
-Contribution: 2020-05-14 00:00
-
-Contribution: 2020-05-14 00:01
-
-Contribution: 2020-05-14 00:02
-
-Contribution: 2020-05-14 00:03
-
-Contribution: 2020-05-14 00:04
-
-Contribution: 2020-05-14 00:05
-
-Contribution: 2020-05-14 00:06
-
-Contribution: 2020-05-14 00:07
-
-Contribution: 2020-05-14 00:08
-
-Contribution: 2020-05-14 00:09
-
-Contribution: 2020-05-14 00:10
-
-Contribution: 2020-05-14 00:11
-
-Contribution: 2020-05-18 00:00
-
-Contribution: 2020-05-18 00:01
-
-Contribution: 2020-05-18 00:02
-
-Contribution: 2020-05-19 00:00
-
-Contribution: 2020-05-20 00:00
-
-Contribution: 2020-05-26 00:00
-
-Contribution: 2020-05-26 00:01
-
-Contribution: 2020-05-26 00:02
-
-Contribution: 2020-05-26 00:03
-
-Contribution: 2020-05-26 00:04
-
-Contribution: 2020-05-26 00:05
-
-Contribution: 2020-05-26 00:06
-
-Contribution: 2020-05-26 00:07
-
-Contribution: 2020-05-27 00:00
-
-Contribution: 2020-05-27 00:01
-
-Contribution: 2020-05-27 00:02
-
-Contribution: 2020-05-27 00:03
-
-Contribution: 2020-05-27 00:04
-
-Contribution: 2020-05-27 00:05
-
-Contribution: 2020-05-27 00:06
-
-Contribution: 2020-05-27 00:07
-
-Contribution: 2020-05-27 00:08
-
-Contribution: 2020-05-27 00:09
-
-Contribution: 2020-05-28 00:00
-
-Contribution: 2020-05-28 00:01
-
-Contribution: 2020-05-28 00:02
-
-Contribution: 2020-05-28 00:03
-
-Contribution: 2020-05-28 00:04
-
-Contribution: 2020-05-28 00:05
-
-Contribution: 2020-05-28 00:06
-
-Contribution: 2020-05-28 00:07
-
-Contribution: 2020-05-28 00:08
-
-Contribution: 2020-05-28 00:09
-
-Contribution: 2020-05-28 00:10
-
-Contribution: 2020-05-28 00:11
-
-Contribution: 2020-05-28 00:12
-
-Contribution: 2020-05-29 00:00
-
-Contribution: 2020-05-29 00:01
-
-Contribution: 2020-05-29 00:02
-
-Contribution: 2020-06-01 00:00
-
-Contribution: 2020-06-01 00:01
-
-Contribution: 2020-06-01 00:02
-
-Contribution: 2020-06-01 00:03
-
-Contribution: 2020-06-01 00:04
-
-Contribution: 2020-06-01 00:05
-
-Contribution: 2020-06-01 00:06
-
-Contribution: 2020-06-01 00:07
-
-Contribution: 2020-06-01 00:08
-
-Contribution: 2020-06-01 00:09
-
-Contribution: 2020-06-01 00:10
-
-Contribution: 2020-06-01 00:11
-
-Contribution: 2020-06-01 00:12
-
-Contribution: 2020-06-01 00:13
-
-Contribution: 2020-06-01 00:14
-
-Contribution: 2020-06-04 00:00
-
-Contribution: 2020-06-04 00:01
-
-Contribution: 2020-06-04 00:02
-
-Contribution: 2020-06-04 00:03
-
-Contribution: 2020-06-04 00:04
-
-Contribution: 2020-06-04 00:05
-
-Contribution: 2020-06-04 00:06
-
-Contribution: 2020-06-04 00:07
-
-Contribution: 2020-06-04 00:08
-
-Contribution: 2020-06-05 00:00
-
-Contribution: 2020-06-05 00:01
-
-Contribution: 2020-06-05 00:02
-
-Contribution: 2020-06-05 00:03
-
-Contribution: 2020-06-05 00:04
-
-Contribution: 2020-06-05 00:05
-
-Contribution: 2020-06-05 00:06
-
-Contribution: 2020-06-05 00:07
-
-Contribution: 2020-06-05 00:08
-
-Contribution: 2020-06-08 00:00
-
-Contribution: 2020-06-08 00:01
-
-Contribution: 2020-06-08 00:02
-
-Contribution: 2020-06-08 00:03
-
-Contribution: 2020-06-08 00:04
-
-Contribution: 2020-06-08 00:05
-
-Contribution: 2020-06-08 00:06
-
-Contribution: 2020-06-08 00:07
-
-Contribution: 2020-06-10 00:00
-
-Contribution: 2020-06-10 00:01
-
-Contribution: 2020-06-10 00:02
-
-Contribution: 2020-06-10 00:03
-
-Contribution: 2020-06-10 00:04
-
-Contribution: 2020-06-10 00:05
-
-Contribution: 2020-06-10 00:06
-
-Contribution: 2020-06-11 00:00
-
-Contribution: 2020-06-11 00:01
-
-Contribution: 2020-06-11 00:02
-
-Contribution: 2020-06-11 00:03
-
-Contribution: 2020-06-11 00:04
-
-Contribution: 2020-06-11 00:05
-
-Contribution: 2020-06-11 00:06
-
-Contribution: 2020-06-11 00:07
-
-Contribution: 2020-06-11 00:08
-
-Contribution: 2020-06-11 00:09
-
-Contribution: 2020-06-11 00:10
-
-Contribution: 2020-06-12 00:00
-
-Contribution: 2020-06-12 00:01
-
-Contribution: 2020-06-12 00:02
-
-Contribution: 2020-06-12 00:03
-
-Contribution: 2020-06-12 00:04
-
-Contribution: 2020-06-12 00:05
-
-Contribution: 2020-06-16 00:00
-
-Contribution: 2020-06-16 00:01
-
-Contribution: 2020-06-16 00:02
-
-Contribution: 2020-06-16 00:03
-
-Contribution: 2020-06-16 00:04
-
-Contribution: 2020-06-16 00:05
-
-Contribution: 2020-06-16 00:06
-
-Contribution: 2020-06-16 00:07
-
-Contribution: 2020-06-16 00:08
-
-Contribution: 2020-06-16 00:09
-
-Contribution: 2020-06-16 00:10
-
-Contribution: 2020-06-16 00:11
-
-Contribution: 2020-06-16 00:12
-
-Contribution: 2020-06-16 00:13
-
-Contribution: 2020-06-16 00:14
-
-Contribution: 2020-06-17 00:00
-
-Contribution: 2020-06-17 00:01
-
-Contribution: 2020-06-17 00:02
-
-Contribution: 2020-06-17 00:03
-
-Contribution: 2020-06-17 00:04
-
-Contribution: 2020-06-17 00:05
-
-Contribution: 2020-06-19 00:00
-
-Contribution: 2020-06-19 00:01
-
-Contribution: 2020-06-19 00:02
-
-Contribution: 2020-06-19 00:03
-
-Contribution: 2020-06-19 00:04
-
-Contribution: 2020-06-19 00:05
-
-Contribution: 2020-06-19 00:06
-
-Contribution: 2020-06-19 00:07
-
-Contribution: 2020-06-19 00:08
-
-Contribution: 2020-06-23 00:00
-
-Contribution: 2020-06-23 00:01
-
-Contribution: 2020-06-23 00:02
-
-Contribution: 2020-06-23 00:03
-
-Contribution: 2020-06-23 00:04
-
-Contribution: 2020-06-23 00:05
-
-Contribution: 2020-06-23 00:06
-
-Contribution: 2020-06-23 00:07
-
-Contribution: 2020-06-23 00:08
-
-Contribution: 2020-06-23 00:09
-
-Contribution: 2020-06-24 00:00
-
-Contribution: 2020-06-24 00:01
-
-Contribution: 2020-06-25 00:00
-
-Contribution: 2020-06-25 00:01
-
-Contribution: 2020-07-02 00:00
-
-Contribution: 2020-07-02 00:01
-
-Contribution: 2020-07-02 00:02
-
-Contribution: 2020-07-02 00:03
-
-Contribution: 2020-07-02 00:04
-
-Contribution: 2020-07-02 00:05
-
-Contribution: 2020-07-02 00:06
-
-Contribution: 2020-07-02 00:07
-
-Contribution: 2020-07-02 00:08
-
-Contribution: 2020-07-02 00:09
-
-Contribution: 2020-07-02 00:10
-
-Contribution: 2020-07-02 00:11
-
-Contribution: 2020-07-02 00:12
-
-Contribution: 2020-07-02 00:13
-
-Contribution: 2020-07-03 00:00
-
-Contribution: 2020-07-03 00:01
-
-Contribution: 2020-07-03 00:02
-
-Contribution: 2020-07-03 00:03
-
-Contribution: 2020-07-03 00:04
-
-Contribution: 2020-07-07 00:00
-
-Contribution: 2020-07-07 00:01
-
-Contribution: 2020-07-09 00:00
-
-Contribution: 2020-07-09 00:01
-
-Contribution: 2020-07-09 00:02
-
-Contribution: 2020-07-09 00:03
-
-Contribution: 2020-07-09 00:04
-
-Contribution: 2020-07-13 00:00
-
-Contribution: 2020-07-13 00:01
-
-Contribution: 2020-07-13 00:02
-
-Contribution: 2020-07-13 00:03
-
-Contribution: 2020-07-13 00:04
-
-Contribution: 2020-07-13 00:05
-
-Contribution: 2020-07-13 00:06
-
-Contribution: 2020-07-13 00:07
-
-Contribution: 2020-07-13 00:08
-
-Contribution: 2020-07-13 00:09
-
-Contribution: 2020-07-13 00:10
-
-Contribution: 2020-07-13 00:11
-
-Contribution: 2020-07-13 00:12
-
-Contribution: 2020-07-13 00:13
-
-Contribution: 2020-07-16 00:00
-
-Contribution: 2020-07-16 00:01
-
-Contribution: 2020-07-16 00:02
-
-Contribution: 2020-07-16 00:03
-
-Contribution: 2020-07-16 00:04
-
-Contribution: 2020-07-16 00:05
-
-Contribution: 2020-07-16 00:06
-
-Contribution: 2020-07-16 00:07
-
-Contribution: 2020-07-16 00:08
-
-Contribution: 2020-07-16 00:09
-
-Contribution: 2020-07-16 00:10
-
-Contribution: 2020-07-21 00:00
-
-Contribution: 2020-07-21 00:01
-
-Contribution: 2020-07-21 00:02
-
-Contribution: 2020-07-21 00:03
-
-Contribution: 2020-07-21 00:04
-
-Contribution: 2020-07-21 00:05
-
-Contribution: 2020-07-21 00:06
-
-Contribution: 2020-07-21 00:07
-
-Contribution: 2020-07-21 00:08
-
-Contribution: 2020-07-21 00:09
-
-Contribution: 2020-07-21 00:10
-
-Contribution: 2020-07-21 00:11
-
-Contribution: 2020-07-29 00:00
-
-Contribution: 2020-07-29 00:01
-
-Contribution: 2020-07-29 00:02
-
-Contribution: 2020-07-29 00:03
-
-Contribution: 2020-07-29 00:04
-
-Contribution: 2020-07-29 00:05
-
-Contribution: 2020-07-29 00:06
-
-Contribution: 2020-07-29 00:07
-
-Contribution: 2020-07-29 00:08
-
-Contribution: 2020-07-29 00:09
-
-Contribution: 2020-07-29 00:10
-
-Contribution: 2020-07-31 00:00
-
-Contribution: 2020-07-31 00:01
-
-Contribution: 2020-07-31 00:02
-
-Contribution: 2020-07-31 00:03
-
-Contribution: 2020-07-31 00:04
-
-Contribution: 2020-07-31 00:05
-
-Contribution: 2020-07-31 00:06
-
-Contribution: 2020-07-31 00:07
-
-Contribution: 2020-07-31 00:08
-
-Contribution: 2020-07-31 00:09
-
-Contribution: 2020-07-31 00:10
-
-Contribution: 2020-07-31 00:11
-
-Contribution: 2020-07-31 00:12
-
-Contribution: 2020-07-31 00:13
-
-Contribution: 2020-07-31 00:14
-
+## License
+UrlHub is an open-source software licensed under the [MIT license](https://github.com/realodix/urlhub/blob/master/LICENSE).
